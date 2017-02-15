@@ -46,7 +46,7 @@ def format_css(gen, metastring, formatter):
     """
     metalist = metastring.replace(' ', '').split(',')
     if gen.settings['RELATIVE_URLS']:
-        site_url = '.'
+        site_url = '..'
     else:
         site_url = gen.settings['SITEURL']
     return [formatter.format(site_url, x) for x in metalist]
@@ -79,7 +79,7 @@ def add_tags(gen, metadata):
     It will add the CSS to the article
     """
     if 'css' in metadata.keys():
-        style = '<link rel="stylesheet" href="{0}/css/{1}" type="text/css" />'
+        style = '<link rel="stylesheet" href="{0}/css/{1}" type="text/css">'
         metadata['styles'] = format_css(gen, metadata['css'], style)
 
 
