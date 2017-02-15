@@ -47,7 +47,7 @@ to add the following in your `<head>` tag:
 {% if article %}
     {% if article.styles %}
         {% for style in article.styles %}
-{{ style }}
+            {{ style|format(SITEURL) }}
         {% endfor %}
     {% endif %}
 {% endif %}
@@ -65,7 +65,7 @@ So, in the template I use for my blog now looks like the following:
     {% if article %}
         {% if article.styles %}
             {% for style in article.styles %}
-    {{ style }}
+                {{ style|format(SITEURL) }}
             {% endfor %}
         {% endif %}
     {% endif %}

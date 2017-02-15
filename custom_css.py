@@ -45,10 +45,7 @@ def format_css(gen, metastring, formatter):
     List of formatted strings
     """
     metalist = metastring.replace(' ', '').split(',')
-    if gen.settings['RELATIVE_URLS']:
-        site_url = '..'
-    else:
-        site_url = gen.settings['SITEURL']
+    site_url = '%s'
     return [formatter.format(site_url, x) for x in metalist]
 
 
