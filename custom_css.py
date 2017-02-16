@@ -19,8 +19,8 @@ Embed CSS files for Pelican
 ===========================
 
 This plugin allows you to easily embed CSS files in the header of individual
-articles. The CSS files are embedded using the HTML <link> tag inside the
-<head> tag.
+articles or pages. The CSS files are embedded using the HTML <link> tag
+inside the <head> tag.
 """
 
 import os
@@ -31,7 +31,7 @@ from pelican import signals
 
 def format_css(gen, metastring, formatter):
     """
-    Create a list of URL-formatted script/style tags
+    Create a list of URL-formatted style tags
     Parameters
     ----------
     gen: generator
