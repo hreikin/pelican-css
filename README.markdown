@@ -90,3 +90,17 @@ So, in the template I use for my blog now looks like the following:
 
 That's it! Run your standard `make html` or `make publish`
 commands and your CSS will be copied and ref'd in the right places.
+
+The previous code only works for articles. For most people that's
+enough. If you want to enable custom CSS in pages too insert the
+following code your `<head>` tag...
+
+```
+{% if page %}
+    {% if page.styles %}
+        {% for style in page.styles %}
+            {{ style|format(SITEURL) }}
+        {% endfor %}
+    {% endif %}
+{% endif %}
+```
