@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-# pelican-css: embed custom CSS easily
+# pelican-custom-css: embed custom CSS easily
 # Copyright (C) 2017 Jorge Maldonado Ventura
+# Maintainer - Michael Haslam
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
