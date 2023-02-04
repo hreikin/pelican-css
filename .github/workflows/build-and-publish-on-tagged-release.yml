@@ -41,6 +41,7 @@ jobs:
           repo_token: "${{ secrets.GH_WORKFLOW_TOKEN }}"
           prerelease: False
           files: |
+            README.md
             LICENSE
             dist/*.tar.gz
             dist/*.whl
