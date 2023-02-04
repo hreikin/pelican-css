@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pelican_custom_css"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Jorge Maldonado Ventura", email="jorgesumle@freakspot.net" },
   { name="Michael Haslam", email="hreikin@gmail.com" },
