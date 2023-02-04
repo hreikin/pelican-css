@@ -1,19 +1,12 @@
-# pelican-css
+# Pelican Custom CSS
 
-pelican-css makes it easy to embed custom CSS into individual
-Pelican articles and pages.
+Pelican Custom CSS makes it easy to embed custom CSS into individual Pelican articles and pages.
 
 ## How
 
-`git clone https://notabug.org/jorgesumle/pelican-css` in your plugins
-folder and add the name of the plugin to your pelicanconf.py file:
+`pip install pelican-custom-css`
 
-```python
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ['pelican-css'] # You may have more plugins
-```
-
-Next, create `css` directory in your `content` directory...
+Next, create a `css` directory in your `content` directory.
 
 ```
 website/
@@ -24,11 +17,10 @@ website/
 │   ├── article1.md
 │   └── pages
 │       └── about.md
-└── pelican.conf.py
+└── pelicanconf.py
 ```
 
-And then add each resource as a comma-separated file name in the
-`CSS` tag:
+And then add each resource as a comma-separated file name in the `CSS` tag:
 
 ```
 Title: Mejor sin Wordpress
@@ -53,7 +45,7 @@ to add the following in your `<head>` tag:
 {% endif %}
 ```
 
-So, in the template I use for my blog now looks like the following:
+So, the template I use for my blog now looks like the following:
 
 ```
 <!DOCTYPE html>
@@ -88,10 +80,7 @@ So, in the template I use for my blog now looks like the following:
 </html>
 ```
 
-That's it! Run your standard `make html` or `make publish`
-commands and your CSS will be copied and ref'd in the right places.
-
-The previous code only works for articles. For most people that's
+The previous code only works for articles. For most people, that's
 enough. If you want to enable custom CSS in pages too insert the
 following code your `<head>` tag...
 
@@ -104,3 +93,5 @@ following code your `<head>` tag...
     {% endif %}
 {% endif %}
 ```
+
+That's it! You can now generate and publish your site normally, for example using `ghp-import` if you're using Github Pages or the standard `make html` or `make publish` commands from Pelican and your CSS will be copied and referenced in the right places.
