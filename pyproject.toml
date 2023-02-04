@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pelican_custom_css"
+version = "0.0.1"
+authors = [
+  { name="Jorge Maldonado Ventura", email="jorgesumle@freakspot.net" },
+  { name="Michael Haslam", email="hreikin@gmail.com" },
+]
+description = "Pelican Custom CSS makes it easy to embed custom CSS into individual Pelican articles and pages."
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/hreikin/pelican-custom-css"
+"Bug Tracker" = "https://github.com/hreikin/pelican-custom-css/issues"
